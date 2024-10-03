@@ -13,10 +13,10 @@ const UserItem: React.FC<Props> = ({user}) => {
     };
 
     return (
-        <div className='card mb-3'>
+        <div className='card mb-3 border-dark'>
             <div className='row g-0 justify-content-between'>
                 <div className='col-4' style={imageStyle}/>
-                <div className="col-6 p-3">
+                <div className="col-8 p-3">
                     <h5 className="card-title">{user.name}</h5>
                     <p className="card-text m-0">
                         <strong>Email:</strong> {user.email}

@@ -1,6 +1,6 @@
 import * as React from "react";
 import {useState} from "react";
-import {IUser, IUserMutation} from "../../types";
+import {IUserMutation} from "../../types";
 
 const roles =  [
     { value: '', label: 'Выберите роль' },
@@ -73,7 +73,7 @@ const UserForm: React.FC<Props> = ({addUser}) => {
                     id="name"
                     type="text"
                     name="name"
-                    className="form-control"
+                    className="form-control border-primary"
                     required/>
             </div>
             <div className="form-group mb-2">
@@ -84,7 +84,7 @@ const UserForm: React.FC<Props> = ({addUser}) => {
                     id="email"
                     type="email"
                     name="email"
-                    className="form-control"
+                    className="form-control border-primary"
                     required/>
             </div>
             <div className="checkbox mb-2">
@@ -94,7 +94,7 @@ const UserForm: React.FC<Props> = ({addUser}) => {
                     type="checkbox"
                     id="active"
                     checked={newUser.active}
-                    className="form-check-input"
+                    className="form-check-input border-dark"
                 />
             </div>
             <div className="form-group mb-2">
@@ -103,7 +103,7 @@ const UserForm: React.FC<Props> = ({addUser}) => {
                     onChange={changeRole}
                     value={newUser.role}
                     id="role"
-                    className="form-control"
+                    className="form-control border-secondary"
                 >
                     {roles.map((option) => (
                         <option
