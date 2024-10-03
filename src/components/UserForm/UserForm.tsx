@@ -62,7 +62,6 @@ const UserForm: React.FC<Props> = ({addUser}) => {
             });
         }
     };
-    console.log(newUser);
 
     return (
         <form  onSubmit={onSubmit} style={{maxWidth: '500px'}}>
