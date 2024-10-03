@@ -1,12 +1,22 @@
+import {IUser} from "../../types";
+import React from "react";
 import UserItem from "./UserItem.tsx";
 
-const Users = () => {
+interface Props {
+    users: IUser[];
+}
+
+const Users: React.FC<Props> = ({users}) => {
+    if (users.length === 0) {
+        return <p className="text-center">Список пуст.</p>; // Сообщение, если пользователей нет
+    }
+
     return (
-        <div>
-            <UserItem/>
-            <UserItem/>
-            <UserItem/>
-        </div>
+        <>
+            {users.map((user) => (
+                <UserItem key={user.id} user={user} />
+            ))}
+        </>
     );
 };
 
