@@ -8,13 +8,13 @@ interface Props {
 
 const Users: React.FC<Props> = ({users}) => {
     if (users.length === 0) {
-        return <p className="text-center">Список пуст.</p>; // Сообщение, если пользователей нет
+        return <p className="text-center">Список пуст.</p>;
     }
 
     return (
         <>
             {users.map((user) => (
-                <UserItem key={user.id} user={user} />
+                <UserItem key={user.id} user={user}/>
             ))}
         </>
     );
